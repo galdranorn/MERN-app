@@ -21,7 +21,8 @@ export class PostDetailPage extends React.Component {
     this.state = {
       name: this.props.post.name,
       title: this.props.post.title,
-      content: this.props.post.content
+      content: this.props.post.content,
+      vote: this.props.post.vote,
     };
   }
   handleInputChange = (event) => {
@@ -79,6 +80,11 @@ export class PostDetailPage extends React.Component {
         <h3 className={styles['post-title']}>{this.props.post.title}</h3>
         <p className={styles['author-name']}><FormattedMessage id="by" /> {this.props.post.name}</p>
         <p className={styles['post-desc']}>{this.props.post.content}</p>
+        <div className={styles['post-vote']}>
+          {this.props.post.vote}
+          <a href="#">+</a>
+          <a href="#">-</a>
+        </div>
       </div>
     );
   };
@@ -131,6 +137,7 @@ PostDetailPage.propTypes = {
     content: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
     cuid: PropTypes.string.isRequired,
+    vote: PropTypes.number.isRequired,
   }).isRequired,
   intl: PropTypes.shape({
     messages: PropTypes.shape({
