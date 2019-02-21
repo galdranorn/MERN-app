@@ -18,7 +18,7 @@
   float: left;
 }
 
-.site-title a {
+.site-title a, .navigation a {
   text-decoration: none;
   color: #FFF;
 }
@@ -33,23 +33,39 @@
   float: right;
 }
 
-.language-switcher {
+.language-switcher, .navigation {
   background: rgba(0, 0, 0, 0.1);
 }
 
-.language-switcher ul {
+.language-switcher {
+  font-size: .8em;
+}
+
+.language-switcher ul, .navigation ul {
   list-style: none;
   width: 980px;
   margin: auto;
+}
+
+.navigation ul {
+  text-align: left;
+}
+
+.language-switcher ul {
   text-align: right;
 }
 
-.language-switcher li {
+.language-switcher li, .navigation li {
   display: inline-block;
-  margin: 10px;
   padding: 5px;
   cursor: pointer;
   color: #fff;
+}
+.navigation li {
+  margin: 10px;
+}
+.language-switcher li {
+  margin: 0 10px;
 }
 
 .language-switcher li:first-child {
