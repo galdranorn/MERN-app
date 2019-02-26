@@ -12,7 +12,7 @@ router.route('/posts/:cuid').get(PostController.getPost);
 router.route('/posts').post(PostController.addPost);
 
 // Edit Post
-router.route('/posts/:cuid').post(PostController.editPost);
+router.route('/posts/:cuid').put(PostController.editPost);
 
 // Delete a post by cuid
 router.route('/posts/:cuid').delete(PostController.deletePost);
